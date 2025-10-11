@@ -1,0 +1,32 @@
+    @font-face {
+        font-family: Inter;
+        font-style: normal;
+        src: url('/fonts/Inter-VariableFont_opsz,wght.ttf');
+    }
+
+    body {
+        background-color: black;
+        margin: 0;
+        padding: 0;
+    }
+
+    p {
+        text-align: center;
+        color: white;
+        font-size: 1.5em;
+        font-family: Inter;
+    }
+
+    h1 {
+        font-family: Inter;
+        text-align: center;
+        color: white;
+        font-size: 3em;
+    }
+
+    .subtitle {
+        background-color: black;
+        width: 50%;
+        margin: auto;
+        margin-top: 20px;
+    }
