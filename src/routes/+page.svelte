@@ -1,6 +1,7 @@
 <script>
     import { base } from "$app/paths";
     import SelectionCard from "$lib/SelectionCard.svelte";
+    import SelectionRow from "$lib/SelectionRow.svelte";
 </script>
 
 
@@ -10,11 +11,7 @@
     <p>You've found me! This is my little place on the web. Here, you'll find me documenting various experiences in life. The firsts, the news, the experiments and the mundane.</p>
 </div>
 
-<SelectionCard
-    title = "About Me"
-    image={`${base}/images/placeholder.svg`}
-    dest="about-me"
-/>
+<SelectionRow />
 
 <style>
     @font-face {

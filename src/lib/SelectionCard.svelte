@@ -17,8 +17,7 @@
     .cardbody {
         background-color: navy;
         border-radius: 10px;
-        width: 50px;
-        height: 200px;
+        width: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -27,16 +26,17 @@
     }
 
     .cardimg {
-        width: 100px;
+        width: 120px;
         max-height: 120px;
         object-fit: contain;
         display: block;
-        margin: 3rem auto 0 auto;
+        margin: 2rem auto 0 auto;
+        border-radius: 5px;
     }
 
     h5 {
         font-family: Inter;
-        font-size: 1.5rem;
+        font-size: 1.75rem;
         color: white;
         text-align: center;
     }
