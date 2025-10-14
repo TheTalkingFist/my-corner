@@ -29,11 +29,14 @@
     }
 
     .modal-backdrop {
-        background-color: darkgrey;
+        background-color: grey;
         padding: 1.5rem;
-        border-radius: 10%;
+        border-radius: 15px;
         margin: 0 auto;
-        max-width: 70%;
+        max-width: 80%;
+        max-height: 80%;
+        overflow-y: auto;
+        box-sizing: border-box;
     }
 
     .close-button {

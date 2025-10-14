@@ -1,17 +1,13 @@
 <script>
     import Blurb from "$lib/Blurb.svelte";
-
+    import TextBox from "$lib/TextBox.svelte";
 
 </script>
 
 <h1>Hi!</h1>
 
 <Blurb blurb="
-    You probably know me as The Talking Fist! I'm an aspiring game developer, programmer and artist.
-
-    For my projects, I mainly use Unity for creating games and Aseprite for pixel-art. I'm closing in on finishing my first certificate for game development, and after that I hope to be starting on my second.
-
-    But, that's all the professional stuff. Blegh.
+    You probably know me as The Talking Fist! I'm an aspiring game developer, programmer and artist, more on those later.
 
     I like to think I'm friendly and fun to be around. Making people happy is a thing that I just happen to like to do. I hope I'm good at that...
 

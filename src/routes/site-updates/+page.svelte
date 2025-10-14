@@ -1,10 +1,6 @@
 <script>
     import Blurb from "$lib/Blurb.svelte";
     import PostRow from "$lib/PostRow.svelte";
-
-
-
-    // $: posttrunk = posttrunk.slice(0, 100) + (posttrunk.length > 100 ? "..." : "");
 </script>
 
 <h1>Site Updates</h1>
@@ -15,11 +11,17 @@
 
 <PostRow 
     posttitle="Hello, World!"
-    posttrunk=""
-    postfooter="October 12th, Sunday"
+    postcontent="
+        First post! This was supposed to come out, like, 2-3 days ago, but I got busy and distracted. Hopefully I can commit to this for the long term!
+
+        This site's barebones right now, of course. White text on a black background. I still haven't fully decided how I'm going to style this site, but I'll get there soon. Maybe I'll browse some cool sites people have shared on the internet, or something.
+        
+        Stay tuned!
+    "
+    postfooter="October 14th, Tuesday"
 />
 
 <style>
-    
+
 </style>
 
