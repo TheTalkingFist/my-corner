@@ -11,6 +11,8 @@
     I mainly want this site to be a place for me to show off my projects and my days. If I'm ever feeling sentimental, I can look through this site to see how far I've come.
 
     And, in the off-chance that this site, or even I, become popular, then perhaps this place can serve, too, as a sign for others to see that they can go way, way farther than where they are now should they believe in themselves.
+
+    In any chance, I'm hoping I can commit to this being a weekly update.
 "/>
 
 
