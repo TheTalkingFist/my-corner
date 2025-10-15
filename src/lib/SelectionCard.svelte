@@ -6,9 +6,9 @@
 
 <a href="/{dest}">
     <div style="width: 14rem;" class="cardbody">
-        <img src={image} alt={title} class="cardimg">
+        <img src={image} alt={title} class="card-img-top" />
         <div>
-            <h5>{title}</h5>
+            <p class="card-title">{title}</p>
         </div>
     </div>
 </a>
@@ -18,6 +18,7 @@
         background-color: navy;
         border-radius: 10px;
         width: auto;
+        height: 300px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -25,19 +26,12 @@
         overflow: hidden;
     }
 
-    .cardimg {
-        width: 120px;
-        max-height: 120px;
-        object-fit: contain;
-        display: block;
-        margin: 2rem auto 0 auto;
-        border-radius: 5px;
-    }
-
-    h5 {
+    p {
         font-family: Inter;
-        font-size: 1.75rem;
+        font-weight: bold;
+        font-size: 1.5rem;
         color: white;
         text-align: center;
+        margin: 0.5rem 0.75rem;
     }
 </style>

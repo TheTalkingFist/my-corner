@@ -28,6 +28,8 @@
     }
 
     h1 {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
         text-align: center;
         color: white;
         font-size: 3em;
