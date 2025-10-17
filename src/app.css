@@ -6,17 +6,19 @@
 
     body {
         padding-top: 2rem;
-        background-color: black;
+        background-color: #EF709D;
         margin: 0;
         padding: 0;
     }
 
     h1 {
-        font-family: Inter;
+        font-family: Arial, Helvetica, sans-serif;
         text-align: center;
         color: white;
         font-size: 3em;
         font-weight: 700;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
     }
 
     h2 {
@@ -30,12 +32,91 @@
         text-align: center;
         color: white;
         font-size: 1.5em;
-        font-family: Inter;
+        font-family: Arial, Helvetica, sans-serif;
     }
 
     .subtitle {
-        background-color: black;
         width: 50%;
         margin: auto;
         margin-top: 20px;
+    }
+
+    /* Top-only zig-zag; narrow teeth (2.5% steps) */
+    .sawtooth-top{
+        margin-top: -14px;
+        --tooth-h: 14px;              /* tooth depth into the section */
+        position: relative;
+        overflow: hidden;             /* keeps children tidy */
+        clip-path: polygon(
+            /* top zig-zag (left → right) */
+            0% 0%,
+            2.5% var(--tooth-h), 5% 0%,
+            7.5% var(--tooth-h), 10% 0%,
+            12.5% var(--tooth-h), 15% 0%,
+            17.5% var(--tooth-h), 20% 0%,
+            22.5% var(--tooth-h), 25% 0%,
+            27.5% var(--tooth-h), 30% 0%,
+            32.5% var(--tooth-h), 35% 0%,
+            37.5% var(--tooth-h), 40% 0%,
+            42.5% var(--tooth-h), 45% 0%,
+            47.5% var(--tooth-h), 50% 0%,
+            52.5% var(--tooth-h), 55% 0%,
+            57.5% var(--tooth-h), 60% 0%,
+            62.5% var(--tooth-h), 65% 0%,
+            67.5% var(--tooth-h), 70% 0%,
+            72.5% var(--tooth-h), 75% 0%,
+            77.5% var(--tooth-h), 80% 0%,
+            82.5% var(--tooth-h), 85% 0%,
+            87.5% var(--tooth-h), 90% 0%,
+            92.5% var(--tooth-h), 95% 0%,
+            97.5% var(--tooth-h), 100% 0%,
+            /* sides + bottom */
+            100% 100%, 0% 100%
+        );
+    }
+
+    .sawtooth-top::before{
+        content:"";
+        position:absolute; inset:0 0 auto 0; /* top strip */
+        height: clamp(24px, 6vw, 24px);
+        background: linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,0));
+        pointer-events:none;
+        z-index:1;
+        /* match the same contour so the shadow follows the teeth perfectly */
+    }
+
+
+
+
+
+    .sawtooth-bottom {
+        --tooth-h: 14px;      /* tooth height; raise/lower as you like */
+        position: relative;
+        overflow: hidden;     /* keep contents neatly inside the shape */
+
+        /* bottom-only zig-zag (narrow teeth; 2.5% step) */
+        clip-path: polygon(
+            0% 0%, 100% 0%, 100% 100%,
+            97.5% calc(100% - var(--tooth-h)), 95% 100%,
+            92.5% calc(100% - var(--tooth-h)), 90% 100%,
+            87.5% calc(100% - var(--tooth-h)), 85% 100%,
+            82.5% calc(100% - var(--tooth-h)), 80% 100%,
+            77.5% calc(100% - var(--tooth-h)), 75% 100%,
+            72.5% calc(100% - var(--tooth-h)), 70% 100%,
+            67.5% calc(100% - var(--tooth-h)), 65% 100%,
+            62.5% calc(100% - var(--tooth-h)), 60% 100%,
+            57.5% calc(100% - var(--tooth-h)), 55% 100%,
+            52.5% calc(100% - var(--tooth-h)), 50% 100%,
+            47.5% calc(100% - var(--tooth-h)), 45% 100%,
+            42.5% calc(100% - var(--tooth-h)), 40% 100%,
+            37.5% calc(100% - var(--tooth-h)), 35% 100%,
+            32.5% calc(100% - var(--tooth-h)), 30% 100%,
+            27.5% calc(100% - var(--tooth-h)), 25% 100%,
+            22.5% calc(100% - var(--tooth-h)), 20% 100%,
+            17.5% calc(100% - var(--tooth-h)), 15% 100%,
+            12.5% calc(100% - var(--tooth-h)), 10% 100%,
+            7.5%  calc(100% - var(--tooth-h)), 5% 100%,
+            2.5%  calc(100% - var(--tooth-h)), 0% 100%,
+            0% 0%
+        );
     }
