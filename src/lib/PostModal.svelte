@@ -21,7 +21,7 @@
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.3);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -31,7 +31,7 @@
     }
 
     .modal-backdrop {
-        background-color: grey;
+        background-color: #CEE5F2;
         padding: 1.5rem;
         border-radius: 15px;
         max-width: 80%;
@@ -40,12 +40,17 @@
         box-sizing: border-box;
         position: relative;
         margin: 0;
+        box-shadow:
+            0 5px 10px rgba(37, 44, 48, 0.2),
+            inset 0 8px 12px rgba(237, 248, 255, 0.3);
+        border-top: #edf8ff 2px solid;
+        border-bottom: #a4c1d2 3px solid;
     }
 
     .close-button {
         margin-top: 1rem;
         padding: 0.5rem 1rem;
-        background-color: navy;
+        background-color: #5B8C5A;
         color: white;
         border: none;
         border-radius: 5px;
@@ -53,5 +58,9 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    p {
+        color: black;
     }
 </style>

@@ -75,6 +75,7 @@
         );
     }
 
+    /* Top shadow */
     .sawtooth-top::before{
         content:"";
         position:absolute; inset:0 0 auto 0; /* top strip */

@@ -7,7 +7,7 @@
     let showModal = false;
 
     // Auto-generate trunk from postcontent if posttrunk is empty
-    $: displayTrunk = posttrunk || (postcontent.length > 150 ? postcontent.substring(0, 150).trim() + "..." : postcontent);
+    $: displayTrunk = posttrunk || (postcontent.length > 130 ? postcontent.substring(0, 130).trim() + "..." : postcontent);
 </script>
 
 
@@ -19,7 +19,7 @@
     <p class="posttrunk">
         {displayTrunk}
     </p>
-    
+
     <div class="postdate">
         <p style="color:black">{postfooter}</p>
     </div>
@@ -28,13 +28,13 @@
 <PostModal show={showModal} onClose={() => (showModal = false)}>
     <h2>{posttitle}</h2>
     <p class="postcontent">{postcontent}</p>
-    <p><i>{postfooter}</i></p>
+    <p class="postfooter"><i>{postfooter}</i></p>
 </PostModal>
 
 
 <style>
     .postcard {
-        background-color: lightgray;
+        background-color: #CEE5F2;
         border-radius: 10px;
         padding: 1rem;
         margin: 0 auto;
@@ -42,6 +42,11 @@
         display: flex;
         flex-direction: column;
         cursor: pointer;
+        box-shadow:
+            0 5px 10px rgba(37, 44, 48, 0.2),
+            inset 0 8px 12px rgba(237, 248, 255, 0.3);
+        border-top: #edf8ff 2px solid;
+        border-bottom: #a4c1d2 3px solid;
     }
 
     .postdate {
@@ -68,8 +73,19 @@
 
     .postcontent{
         width: 80%;
-        margin: 0 auto; 
+        margin: 0 auto;
         white-space: pre-wrap;
+        color: black;
+    }
+
+    .postfooter {
+        font-size: 1.25rem;
+        text-align: right;
+        margin-top: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    p, h2 {
         color: black;
     }
 </style>

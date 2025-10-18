@@ -24,6 +24,11 @@
         align-items: center;
         justify-content: flex-start;
         overflow: hidden;
+        box-shadow:
+            0 5px 10px rgba(37, 44, 48, 0.2),
+            inset 0 8px 12px rgba(237, 248, 255, 0.3);
+        border-top: #edf8ff 2px solid;
+        border-bottom: #a4c1d2 3px solid;
     }
 
     p {
