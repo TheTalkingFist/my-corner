@@ -1,5 +1,14 @@
 <script>
     import SelectionCard from '$lib/SelectionCard.svelte';
+    import { requestPipeNav } from './request_pipe';
+
+    function handleCardClick(e, href) {
+        // Let ctrl/meta/shift/middle-click open new tab normally
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
+        e.preventDefault();
+        requestPipeNav(href); // asks the layout to run the pipe and then goto(href)
+    }
+
 </script>
 
 <div class="sawtooth-top">
@@ -8,19 +17,22 @@
             <SelectionCard
                 dest="about-me"
                 title="About Me"
-                image="/images/placeholder.svg"
+                body="Who am I?"
+                onclick={(e) => handleCardClick(e, '/about-me')}
             />
 
             <SelectionCard
                 dest="about-site"
                 title="About This Site"
-                image="/images/placeholder.svg"
+                body="What is this place?"
+                onclick={(e) => handleCardClick(e, '/about-site')}
             />
 
             <SelectionCard
                 dest="site-updates"
                 title="Site Updates"
-                image="/images/placeholder.svg"
+                body="What's been going on here?"
+                onclick={(e) => handleCardClick(e, '/site-updates')}
             />
         </div>
     </div>
@@ -29,14 +41,13 @@
 <style>
     .sectionbody {
         margin: 0 auto;
-        padding: 10px;
         padding-top: 75px;
         display: flex;
         justify-content: center;
         flex-direction: row;
         gap: 2rem;
         width: 100%;
-        min-height: 450px;
+        min-height: 350px;
 
         border-radius: 10px;
 
@@ -99,9 +110,5 @@
             background-position: 100% 0%, center;
         }
     }
-
-
-    /* FIXME: The sawtooth looks cool, but a shadow would look great. The shadow implemented here doesn't work at all */
-    /* TODO: Implement panning animation for lightning bolts */
 
 </style>

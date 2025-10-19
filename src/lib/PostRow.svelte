@@ -38,6 +38,7 @@
         border-radius: 10px;
         padding: 1rem;
         margin: 0 auto;
+        margin-bottom: 20px;
         max-width: 60%;
         display: flex;
         flex-direction: column;

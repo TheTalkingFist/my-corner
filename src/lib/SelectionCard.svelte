@@ -1,14 +1,13 @@
 <script>
-    export let dest;
-    export let title;
-    export let image;
+    let { dest = '#', title = '', body = '', onclick } = $props();
+
 </script>
 
-<a href="/{dest}">
-    <div style="width: 14rem;" class="cardbody">
-        <img src={image} alt={title} class="card-img-top" />
+<a href={dest} onclick={onclick}>
+    <div style="width: 14rem;" class="cardbody blue-card-color">
         <div>
             <p class="card-title">{title}</p>
+            <p class="card-body" style="font-weight: normal; font-size: 1.25rem;">{body}</p>
         </div>
     </div>
 </a>
@@ -18,17 +17,13 @@
         background-color: #CEE5F2;
         border-radius: 10px;
         width: auto;
-        height: 300px;
+        height: 200px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
         overflow: hidden;
-        box-shadow:
-            0 5px 10px rgba(37, 44, 48, 0.2),
-            inset 0 8px 12px rgba(237, 248, 255, 0.3);
-        border-top: #edf8ff 2px solid;
-        border-bottom: #a4c1d2 3px solid;
+
     }
 
     p {
@@ -39,4 +34,32 @@
         text-align: center;
         margin: 1rem 0.75rem;
     }
+
+    @keyframes hover-grow {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.05);
+        }
+    }
+
+    @keyframes hover-shrink {
+        0% {
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .cardbody:hover {
+        animation: hover-grow 0.3s forwards;
+        cursor: pointer;
+    }
+
+    .cardbody:not(:hover) {
+        animation: hover-shrink 0.3s forwards;
+    }
+
 </style>
