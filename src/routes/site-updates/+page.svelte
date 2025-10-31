@@ -15,6 +15,21 @@
 
 <div class="postrows reveal">
     <PostRow
+        posttitle="Nothing Burger"
+        postcontent="
+    Hi. I missed a post yesterday. School's starting up again, and the modules are... dull. Also, I wanted to take a sorta quick break after implementing the whole transition thing, that was a doozy.
+
+    My Balatro official card deck came in today, and I love it! It looks pretty damn cool.
+
+    I hope I'll be able to come up with some more new stuff for this site soon. I'd hate to leave it dead.
+
+    Again, thanks for reading this hand's little rambles!
+        "
+        postfooter="October 27th, Monday"
+    />
+
+<div class="postrows reveal">
+    <PostRow
         posttitle="Colors, and the Mario UI"
         postcontent="
     Hi again! I've decided on a color scheme for the site, which you can see right now! I used coolors.co to help me pick out a pleasant, yet vibrant and fun set of colors.
